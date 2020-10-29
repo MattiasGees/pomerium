@@ -13,7 +13,7 @@
           <div class="card-header">
             <h2>Current user</h2>
             {{if .User.Claims.picture }}
-            <img class="icon" src="{{.User.GetClaim "picture"}}" alt="user image" />
+            <img class="icon" src="{{.User.GetClaims "picture"}}" alt="user image" />
             {{else}}
             <img
               class="icon"
@@ -50,8 +50,8 @@
                   <input
                     type="text"
                     class="field"
-                    value="{{.User.GetClaim "given_name"}}"
-                    title="{{.User.GetClaim "given_name"}}"
+                    value="{{.User.GetClaims "given_name"}}"
+                    title="{{.User.GetClaims "given_name"}}"
                     disabled
                   />
                 </label>
@@ -61,8 +61,8 @@
                   <input
                     type="text"
                     class="field"
-                    value="{{.User.GetClaim "family_name"}}"
-                    title="{{.User.GetClaim "family_name"}}"
+                    value="{{.User.GetClaims "family_name"}}"
+                    title="{{.User.GetClaims "family_name"}}"
                     disabled
                   />
                 </label>
